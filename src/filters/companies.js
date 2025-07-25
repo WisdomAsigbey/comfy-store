@@ -21,13 +21,13 @@ const setupCompanies = (store) => {
       let newStore = [];
       if (text === "all") {
         newStore = [...store];
-        display(newStore, getElement(".products-container"));
+        display(newStore, getElement(".products-container"), true);
       } else {
         newStore = store.filter((product) => product.company === text);
-        display(newStore, getElement(".products-container"));
+        display(newStore, getElement(".products-container"), true);
       }
 
-      display(newStore, getElement(".products-container"));
+      display(newStore, getElement(".products-container"), true);
     }
   });
 };

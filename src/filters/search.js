@@ -16,13 +16,13 @@ const setupSearch = (store) => {
           return products;
         }
       });
-      display(newStore, getElement(".products-container"));
+      display(newStore, getElement(".products-container"), true);
       if (newStore.length < 1) {
         const productsDOM = getElement(".products-container");
         productsDOM.innerHTML = `<h3 class = "filter-error">sorry, no products matched your search</h3>`;
       }
     } else {
-      display(store, getElement(".products-container"));
+      display(store, getElement(".products-container"), true);
     }
   });
 };
