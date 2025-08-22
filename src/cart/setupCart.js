@@ -40,6 +40,7 @@ export const addToCart = (id) => {
   displayCartTotal();
   // set cart in local storage
   setStorageItem("cart", cart);
+  // open cart
   openCart();
 };
 
